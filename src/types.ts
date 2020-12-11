@@ -12,3 +12,17 @@ export interface UserInfo {
 export interface Context {
   userInfo: UserInfo;
 }
+
+export interface MovieInfo {
+  id: string;
+  name: string;
+}
+export interface NullResponse {
+  result: boolean;
+}
+
+export interface Feedback {
+  userId: string;
+  rate: number;
+  comment: string;
+}

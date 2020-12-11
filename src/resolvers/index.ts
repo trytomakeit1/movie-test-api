@@ -1,13 +1,28 @@
 import { currentUser, register, login } from "./auth";
 
-const resolverMap = {
+import { moviesList, insertMovie, updateMovie, deleteMovie } from "./movieResolver";
+
+const userResolverMap = {
   Query: {
     currentUser,
+
   },
   Mutation: {
     login,
-    register,
+    register
   },
 };
 
-export default resolverMap;
+
+const movieResolverMap = {
+  Query: {
+    moviesList
+  },
+  Mutation: {
+    insertMovie,
+    updateMovie,
+    deleteMovie
+  },
+};
+
+export default [userResolverMap, movieResolverMap];
